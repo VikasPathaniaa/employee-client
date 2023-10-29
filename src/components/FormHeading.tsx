@@ -1,9 +1,10 @@
 import React from 'react';
+import { InitialStateTypes } from '../type';
 
-const FormHeading = () => {
+const FormHeading = ({ editableData }: { editableData: InitialStateTypes }) => {
   return (
-    <div className='w-[70%] h-[7vh] mx-auto flex justify-center items-center rounded mt-3 shadow-md'>
-        <p className='font-medium'>Get an Estimate for Workspace</p>
+    <div className='w-full mx-auto flex justify-center items-center rounded mt-3 '>
+      <p className='text-xl sm:text-2xl md:text-3xl p-4 underline'>{editableData ? "Update Your" : "Get an"} Estimate for Workspace</p>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import axios from "axios";
+import { InitialStateTypes } from "../type";
 
 
 const axiosInstance = axios.create({
@@ -9,7 +10,7 @@ const axiosInstance = axios.create({
 })
 
 
-export const postRequest = (slug: string, data: any) => {
+export const postRequest = (slug: string, data: InitialStateTypes) => {
     return axiosInstance.post(slug, data)
 }
 
@@ -19,4 +20,8 @@ export const getRequest = (slug: string) => {
 
 export const deleteRequest = (slug: string) => {
     return axiosInstance.delete(slug)
+}
+
+export const putRequest = (slug: string , data:InitialStateTypes) => {
+    return axiosInstance.put(slug , data)
 }

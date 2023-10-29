@@ -1,22 +1,29 @@
-import React from 'react';
-import Button from './Button';
+import React from "react";
+import Button from "./Button";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className='bg-[#22242a] '>
-        <div className=' w-[70%] mx-auto flex flex-row justify-between p-7 mt-12'>
-        <div className='w-[30%]'>
-            <p className='text-white mb-7'> High level experience in web design and development knowledge , producing quality work.</p>
-            <Button title='Get started'/>
+    <footer className="bg-[#22242a] ">
+      <div className=" mx-auto flex flex-col md:flex-row justify-between items-start p-7 mt-12 flex-wrap gap-5">
+        <div className="basis-[40%]">
+          <p className="text-white mb-7">
+            {" "}
+            High level experience in web design and development knowledge ,
+            producing quality work.
+          </p>
+        <Link to="/">  <Button title="Get started" /> </Link>
         </div>
-        <div >
-            <p className='text-white my-3 font-medium'>List of Employes </p>
-            <p className='text-white  my-3 '>Technology  : React, Tailwind , Node js , Mongo Db</p>
-            <p className='text-white text-sm  my-3 '>Author : Vikas Singh</p>
+        <div className="basis-[40%]">
+          <p className="text-white my-3 font-medium">List of Employes </p>
+          <p className="text-white  my-3 ">
+            Technology : React, Tailwind , Node js , Mongo Db
+          </p>
+          <p className="text-white text-sm  my-3 ">Author : Vikas Singh</p>
         </div>
-        </div>
-    </div>
+      </div>
+    </footer>
   );
-}
+};
 
 export default Footer;
