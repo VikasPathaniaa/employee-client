@@ -3,7 +3,7 @@ import { InitialStateTypes } from "../type";
 
 
 const axiosInstance = axios.create({
-    baseURL: "http://localhost:8000",
+    baseURL: "https://employee-server-red.vercel.app",
     headers: {
         'Content-Type': 'application/json'
     }
